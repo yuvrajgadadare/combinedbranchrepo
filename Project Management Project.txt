@@ -1,0 +1,78 @@
+Project Management Tool
+
+Roles
+	role_id
+	role_name
+Admin
+Student
+
+user_details
+	user_id
+	role_id(FK)
+	user_name unique not null
+	full_name
+	email_address unique not null
+	mobile_number
+	password
+
+projects
+	project_id
+	project_title
+	project_description
+	project_stack
+	start_date
+	expected_end_date
+	actual_end_date
+	project_status
+	git_repo_link
+
+project_tasks
+	task_id
+	task_title
+	description
+	duration_in_hrs	
+	amount
+	status
+	task_repo_link
+
+
+
+task_assign
+	assing_id
+	project_id(FK)
+	user_id(FK)
+	assigned_date
+	start_date
+	expected_end_date
+	actual_end_date
+	task_status
+	
+=> create tables by code first approach
+=> During migration/ update database admin should be inserted automatically if it is not exists.
+
+For Admin 
+	=> Admin should login by user_name/email_address & password
+	=> After login admin can see all the registered students
+	=> Can create new projects, view all the created projects along with status
+	=> create project wise tasks
+	=> Assign task to the student/students
+	=> Track all the assigned tasks
+ 
+
+For Student
+	=> After login student can see the assigned tasks
+	=> Can see all the completed/in completed tasks 
+	=> Student can change the status of assigned task
+	=> Can see the monthly earning
+
+
+
+
+
+
+
+
+
+
+
+
